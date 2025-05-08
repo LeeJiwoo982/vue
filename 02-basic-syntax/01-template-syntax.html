@@ -11,7 +11,9 @@
   <div id="app">
     <!-- template syntax -->
     <p>Message: {{ msg }}</p>
+
     <div v-html="rawHtml"></div>
+    
     <div v-bind:id="dynamicId"></div>
     {{ number + 1 }}
     {{ ok ? 'YES' : 'NO' }}
@@ -19,9 +21,12 @@
 
     <!-- directive -->
     <div v-bind:id="`list-${id}`"></div>
+
     <p v-if="seen">Hi there</p>
+
     <a v-bind:href="myUrl">Link</a>
     <button v-on:click="doSomething">button</button>
+
     <form v-on:submit.prevent="onSubmit">
       <input type="submit">
     </form>
