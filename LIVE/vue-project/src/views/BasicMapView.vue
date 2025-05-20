@@ -1,5 +1,5 @@
 <template>
-  <!-- <input v-model="keyword" @input="updateMap"/> <br> -->
+  <input v-model="keyword" @input="updateMap"/> <br>
   <iframe :src="mapUrl"></iframe>
 </template>
 
@@ -9,7 +9,7 @@ import { ref, onMounted } from 'vue'
 const lat = ref(null)
 const lng = ref(null)
 const mapUrl = ref('')
-// const keyword = ref('')
+const keyword = ref('')
 
 // 위치 정보 가져오기
 const getCurrentLocation = () => {
@@ -29,7 +29,7 @@ const updateMap = () => {
     `?ll=${lat.value},${lng.value}` +
     `&z=14` +
     `&output=embed` 
-    // + `&q=${keyword.value.trim()}`
+    + `&q=${keyword.value.trim()}`
 }
 
 // 초기 위치 설정
